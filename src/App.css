@@ -1,38 +1,567 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+ * {
+     margin: 0 ;
+     
+ }
+
+ body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+ button{
+   all: unset;
+   padding: 6px 16px;
+   background: #d01c28;
+   height: 32px;
+   color: white;
+   font-weight: 500;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+ }
+ button:hover {
+    background: #a9171f;
+ }
+
+ .secondary-btn {
+    background: transparent;
+    color: #d01c28;
+    border: 1px solid;
+    transition: all 0.3s ease;
+ }
+
+ .secondary-btn:hover {
+    background: #d01c28;
+    color: white;
+    border: 1px solid #d01c28;
+ }
+
+ .container{
+    margin: 0 auto;
+    max-width: 1280px;
+
+
+ }
+ /* Navbar css */
+
+ nav{
+    display:flex ;
+    justify-content: space-between;
+    max-width: 1280px;
+    height: 72px;
+    align-items: center;
+
+ }
+
+ nav ul{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+ }
+ nav ul li a {
+    text-decoration: none;
+    color: inherit;
+ }
+ .nav-buttons .nav-btn {
+    margin-left: 10px;
+    background-color: #d01c28;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+ }
+
+ .cart-icon {
+    position: relative;
+    display: inline-block;
+    margin-left: 12px;
+    vertical-align: middle;
+ }
+
+ .cart-icon img {
+    width: 36px;
+    /* slightly larger */
+    height: 36px;
+    object-fit: contain;
+    border-radius: 6px;
+ }
+
+ .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #d01c28;
+    color: white;
+    font-size: 13px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    z-index: 10;
+ }
+
+/* Hero.CSS */
+ .hero{
+    align-items: center;
+    height:calc(100vh - 72) ;
+    display: flex;
+ }
+ .hero-content{
+    display: flex;
+    flex-direction:column ;
+    margin-top: 4rem;
+    gap: 36px;
+ }
+
+ .hero h1{
+
+    font-weight: 800;
+    font-size: 108px;
+    line-height: 102px;
+ }
+
+ .hero p {
+
+     font-weight: 600;
+     color: black;
+     max-width: 400px;
+     
+ }
+
+ .hero-btn{
+    display: flex;
+    gap:40px
+     
+
+ }
+ .hero-btn{
+    font-size: 24px;
+ }
+
+.secondary-btn{
+    background: transparent;
+    color: #d01c28;
+    border: 1px solid;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.shoping p{
+    font-size: 14px;
+    margin-bottom: 8px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.brand-icons{
+    display: flex;
+    gap: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* menu.css */
+.menu {
+   padding: 2rem;
+   text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-title {
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+   font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-items {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 2rem;
+}
+
+.menu-card {
+   border: 1px solid #ddd;
+   padding: 1rem;
+   border-radius: 12px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+   transition: transform 0.3s ease;
+   background: white;
+}
+
+.menu-card:hover {
+   transform: translateY(-5px);
+}
+
+.menu-card img {
+   width: 100%;
+   border-radius: 8px;
+}
+
+.product-details {
+   margin-top: 1rem;
+}
+
+.product-details h3 {
+   font-size: 1.2rem;
+   margin-bottom: 0.5rem;
+   font-weight: 600;
+}
+
+.product-details p {
+   font-size: 1rem;
+   font-weight: 500;
+   color: #555;
+   margin-bottom: 0.8rem;
+}
+
+.product-details button {
+   background: #d01c28;
+   color: white;
+   padding: 6px 16px;
+   border-radius: 8px;
+   cursor: pointer;
+   font-weight: 500;
+   transition: background 0.3s ease;
+}
+
+.product-details button:hover {
+   background: #a9171f;
+}
+.filters {
+   display: flex;
+   gap: 10px;
+   margin: 20px 0;
+   flex-wrap: wrap;
+}
+
+.filters select {
+   padding: 6px 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-family: "Poppins", sans-serif;
+}
+
+/* location.css */
+.location {
+   padding: 2rem;
+   text-align: center;
+   background-color: #fff;
+   border-radius: 12px;
+   margin-top: 3rem;
+}
+
+.location h2 {
+   font-size: 2rem;
+   color: #d01c28;
+   margin-bottom: 1rem;
+}
+
+.location p {
+   font-size: 2rem;
+   color: black;
+}  
+
+.map-container {
+   margin: 1rem 0;
+   border-radius: 12px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.store-info {
+   margin-top: 1rem;
+   font-size: 1rem;
+   line-height: 1.6;
+   color: black;
+  
+}
+
+/* About.css */
+.about {
+   padding: 2rem;
+   max-width: 1200px;
+   margin: 2rem auto;
+   text-align: center;
+   background-color: #fff;
+   border-radius: 25px;
+   box-shadow: 0 30px 45px rgba(0, 0, 0, 0.05);
+}
+
+.about h2 {
+   color: #d01c28;
+   font-size: 2rem;
+   margin-bottom: 1rem;
+}
+
+.about p {
+   color: black;
+   font-size: 2rem;
+   line-height: 1.6;
+   margin-bottom: 1rem;
+}
+
+/* Contact.css */
+
+.contact-section {
+   padding: 2rem;
+   background-color: #fff;
+   border-radius: 25px;
+   box-shadow: 0 30px 45px rgba(0, 0, 0, 0.05);
+   margin: 3rem auto;
+   max-width: 900px;
+   text-align: center;
+}
+
+.contact-section-heading {
+   font-size: 2rem;
+   color: #d01c28;
+   margin-bottom: 1.5rem;
+}
+
+.contact-section-form {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.contact-section-input,
+.contact-section-textarea {
+   padding: 0.75rem;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+   font-family: "Poppins", sans-serif;
+   font-size: 1rem;
+}
+
+.contact-section-button {
+   background: #d01c28;
+   color: white;
+   border: none;
+   font-weight: 500;
+   padding: 0.75rem;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+}
+
+.contact-section-button:hover {
+   background: #b31822;
+}
+
+
+/* Auth */
+.auth-container {
+   max-width: 400px;
+   margin: 4rem auto;
+   padding: 2rem;
+   border: 1px solid #ddd;
+   border-radius: 12px;
+   background-color: #fff;
+   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.auth-title {
+   text-align: center;
+   margin-bottom: 1.5rem;
+   font-weight: 700;
+   color: #d01c28;
+}
+
+.auth-form {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.auth-input {
+   padding: 10px;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+   font-size: 16px;
+}
+
+.auth-input:focus {
+   border-color: #d01c28;
+   outline: none;
+}
+
+.auth-button {
+   padding: 10px;
+   border-radius: 8px;
+   background-color: #d01c28;
+   color: white;
+   font-weight: 600;
+   border: none;
+   cursor: pointer;
+   transition: background 0.3s ease;
+}
+
+.auth-button:hover {
+   background-color: #a0101c;
+}
+
+.auth-switch {
+   text-align: center;
+   margin-top: 1rem;
+   font-size: 14px;
+}
+
+.auth-switch a {
+   color: #d01c28;
+   font-weight: 500;
+   text-decoration: none;
+}
+
+.auth-switch a:hover {
+   text-decoration: underline;
+}
+
+/* shoping cart.css */
+.cart-container {
+   padding: 2rem;
+   max-width: 700px;
+   margin: 0 auto;
+}
+
+.cart-items {
+   list-style: none;
+   padding: 0;
+   margin: 1rem 0;
+}
+
+.cart-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem;
+   border-bottom: 1px solid #ddd;
+}
+
+.cart-controls {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.cart-controls button {
+   padding: 4px 10px;
+   font-size: 16px;
+   background: #d01c28;
+   color: white;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.cart-controls button:hover {
+   background: #a9171f;
+}
+
+.remove-btn {
+   background: transparent;
+   color: #d01c28;
+   border: 1px solid #d01c28;
+   padding: 6px 10px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.remove-btn:hover {
+   background: #d01c28;
+   color: white;
+}
+
+.cart-total {
+   text-align: right;
+   font-weight: bold;
+}
+
+.empty-cart {
+   text-align: center;
+   font-style: italic;
+}
+
+/* Admin.css */
+.admin-panel {
+   max-width: 900px;
+   margin: 2rem auto;
+   padding: 1rem;
+}
+
+.admin-panel h2 {
+   text-align: center;
+   margin-bottom: 1rem;
+}
+
+.admin-form {
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+   margin-bottom: 1.5rem;
+}
+
+.admin-form input {
+   flex: 1 1 200px;
+   padding: 0.5rem;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+}
+
+.admin-form button {
+   background-color: #dc3545;
+   color: white;
+   border: none;
+   padding: 0.6rem 1.2rem;
+   border-radius: 6px;
+   cursor: pointer;
+}
+
+.admin-form button:hover {
+   background-color: #dc3545;
+}
+
+.product-list {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 1rem;
+}
+
+.admin-product-card {
+   border: 1px solid #ddd;
+   padding: 1rem;
+   border-radius: 10px;
+   text-align: center;
+}
+
+.admin-product-card img {
+   width: 100%;
+   max-height: 160px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+
+.admin-product-card h3 {
+   margin: 0.5rem 0;
+   font-weight: 600;
+}
+
+.admin-product-card p {
+   margin: 0.3rem 0;
+   font-weight: bold;
+}
+
+.admin-product-card button {
+   margin: 0.3rem;
+   padding: 0.4rem 0.8rem;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.admin-product-card .delete-btn {
+   background-color: #dc3545;
+   color: white;
+}
+
+.admin-product-card .delete-btn:hover {
+   background-color: #a71d2a;
 }
